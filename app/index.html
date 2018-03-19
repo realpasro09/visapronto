@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link type="text/css" rel="stylesheet"  href="smart-form/contact/css/smart-forms.css">
   <!-- <link rel="stylesheet" href="app.css"> -->
 
   <link rel="stylesheet" type="text/css" href="plugins.css">
@@ -42,7 +43,7 @@
           <div  id="navbarNavDropdown" class="navbar-collapse collapse">
               <ul class="navbar-nav ml-auto">
                   <li class="nav-item dropdown active">
-                      <a class="nav-link  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Inicio</a>
+                      <a class="nav-link  dropdown-toggle" aria-haspopup="true" aria-expanded="false" href="#">Inicio</a>
                   </li>
                   <li class="nav-item dropdown dropdown-full-width">
                       <a class="nav-link dropdown-toggle" href="#aboutus" aria-haspopup="true" aria-expanded="false">
@@ -55,7 +56,7 @@
                       </a>
                   </li>
                   <li class="nav-item dropdown dropdown-full-width">
-                      <a class="nav-link dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                      <a class="nav-link dropdown-toggle" href="#contactus" role="button" aria-haspopup="true" aria-expanded="false">
                           Contáctenos
                       </a>
                   </li>
@@ -246,7 +247,7 @@
                 </h3>
             </div>
             <div class="col-lg-4 pt0">
-                <a href="#" class="btn btn-lg btn-white-outline">
+                <a href="#contactus" class="btn btn-lg btn-white-outline">
                     Contáctenos
                 </a>
             </div>
@@ -328,117 +329,122 @@
         </div><!--/col-->
     </div>
 </div><!--Features-->
-<footer class="footer footer-standard pt50 pb20">
+<div class="bg-parallax parallax-overlay" data-jarallax='{"speed": 0.2}' style='background-image: url("images/bg1.jpg")'>
+  <div class="container pt60 pb60">
+      <div class="row">
+          <div class="col-lg-8">
+              <h3 class="text-white">
+                  Revisa los tipos de visas en la que puedes aplicar
+              </h3>
+          </div>
+          <div class="col-lg-4 pt0">
+              <a href="#tipovisas" class="btn btn-lg btn-white-outline">
+                  Tipo de Visas
+              </a>
+          </div>
+      </div>
+  </div>
+</div><!--cta-->
+<div id="contactus" class="container pt90 pb50">
+    <div class="row">
+        <div class="col-md-6 mb40">
+
+            <h4 class="text-uppercase">Dirección</h4>
+            <p>
+                124, Munna Wali Dhani, Lalchandpura, <br> Jhotwara, Jaipur, 302012
+            </p>
+            <br>
+            <h4 class="text-uppercase">Horario de Oficina</h4>
+            <p>
+                Monday-Friday: 8am to 6pm<br>
+                Saturday: 10am to 2pm<br>
+                Sunday: Closed</p>
+            <br>
+            <h4 class="text-uppercase">Correo</h4>
+            <p>
+                <a href="#">support@assan.com</a></p>
+            <br>
+            <h4 class="text-uppercase">Telefonos</h4>
+            <p>
+                <a href="#">+120 234-449-3949</a></p>
+            <br>
+            <h4 class="text-uppercase">Social Media</h4>
+            <div class="clearfix pt10">
+                <a href="#" class="social-icon si-border si-facebook">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-facebook"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6 mb40">
+            <h2>Un gusto saber acerca de tí</h2> 
+            <p>
+                Mandanos un correo y nosotros te contactaremos lo mas pronto posible
+            </p>
+           <div class="smart-wrap">
+    <div class="smart-forms smart-container">
+    
+        
+        <form method="post" action="smart-form/contact/php/smartprocess.php" id="smart-form">
+            <div class="form-body">
+            
+                <div class="section">
+                    <label class="field prepend-icon">
+                        <input type="text" name="sendername" id="sendername" class="gui-input" placeholder="Nombre Completo">
+                        <span class="field-icon"><i class="fa fa-user"></i></span>  
+                    </label>
+                </div><!-- end section -->
+                
+                <div class="section">
+                    <label class="field prepend-icon">
+                        <input type="email" name="emailaddress" id="emailaddress" class="gui-input" placeholder="Correo Electrónico">
+                        <span class="field-icon"><i class="fa fa-envelope"></i></span>
+                    </label>
+                </div><!-- end section -->
+                
+                <div class="section">
+                    <label class="field prepend-icon">
+                        <input type="text" name="sendersubject" id="sendersubject" class="gui-input" placeholder="Titulo del mensaje">
+                        <span class="field-icon"><i class="fa fa-lightbulb-o"></i></span>
+                    </label>
+                </div><!-- end section -->
+                
+                <div class="section">
+                    <label class="field prepend-icon">
+                        <textarea class="gui-textarea" id="sendermessage" name="sendermessage" placeholder="Mensaje"></textarea>
+                        <span class="field-icon"><i class="fa fa-comments"></i></span>
+                        <span class="input-hint"> <strong>Hint:</strong> Ingresa entre 80 - 300 letras.</span>   
+                    </label>
+                </div><!-- end section -->
+            </div><!-- end .form-body section -->
+            <div class="form-footer">
+                <button type="submit" data-btntext-sending="Enviando..." class="button btn btn-primary">Enviar</button>
+                <button type="reset" class="button"> Limpiar </button>
+            </div><!-- end .form-footer section -->
+        </form>
+    </div><!-- end .smart-forms section -->
+</div><!-- end .smart-wrap section -->
+        </div>
+    </div>
+</div>
+<footer class="footer footer-dark pt50 pb30">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 col-md-6 mb40">
-                <h3>About Us</h3>
-                <p>
-                    In eu libero ligula. Fusce eget metus lorem, ac viverra leo. Nullam convallis, arcu vel pellentesque sodales, nisi est varius diam, ac ultrices sem ante quis sem. Proin ultricies volutpat sapien, nec scelerisque ligula mollis lobortis.
-                </p>
-                <a href="#" class="btn btn-white-outline btn-sm">Learn More</a>
-            </div>
-            <div class="col-lg-2 col-md-6 mb40">
-                <h3>Quick links</h3>
-                <ul class="list-unstyled footer-list-item">
-                    <li>
+            <div class="col-lg-6  ml-auto mr-auto text-center">
+                <ul class="social-icons list-inline">
+                    <li class="list-inline-item">
                         <a href="#">
-                            About
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            News
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            FAQS
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Contact
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Term & conditions
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Privacy & policy
+                            <i class="fa fa-facebook"></i>Facebook
                         </a>
                     </li>
                 </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 mb40">
-                <h3>Latest News</h3>
-                <ul class="list-unstyled latest-news">
-                    <li class="media">
-                        <a href="#"> <img class="d-flex mr-3 img-fluid" width="64" src="images/img1.jpg" alt="Generic placeholder image"></a>
-                        <div class="media-body">
-                            <h5 class="mt-0 mb-1"><a href="#">Beautiful Sofa lamp at low price</a></h5>
-                            April 05, 2017
-                        </div>
-                    </li>
-                    <li class="media my-3">
-                        <a href="#"> <img class="d-flex mr-3 img-fluid" width="64" src="images/img2.jpg" alt="Generic placeholder image"></a>
-                        <div class="media-body">
-                            <h5 class="mt-0 mb-1"><a href="#">Lorem ipsum dolor sit amet</a></h5>
-                            Jan 05, 2017
-                        </div>
-                    </li>
-                    <li class="media">
-                        <a href="#"> <img class="d-flex mr-3 img-fluid" width="64" src="images/img5.jpg" alt="Generic placeholder image"></a>
-                        <div class="media-body">
-                            <h5 class="mt-0 mb-1"><a href="#">New awesome features of bootstrap 4</a></h5>
-                            March 15, 2017
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 mb40">
-                <h3>Headquarters</h3>
-                <img src="images/map-img.png" alt="" class="img-fluid">
+                <h4><i class="fa fa-phone"></i> 1800-355-4322</h4>
+                <h4><i class="fa fa-envelope"></i> support@assan.com</h4>
+                <p>&copy; Copyright 2018. Visa Pronto</p>
             </div>
         </div>
     </div>
-</footer><!--/footer-->
-<div class="footer-bottomAlt">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-7">
-                <div class="clearfix">
-                    <a href="#" class="social-icon-sm si-dark si-facebook si-dark-round">
-                        <i style='content:"\f09a' class="fa fa-facebook"></i>
-                        <i class="fa fa-facebook"></i>
-                    </a>
-                    <a href="#" class="social-icon-sm si-dark si-twitter si-dark-round">
-                        <i class="fa fa-twitter"></i>
-                        <i class="fa fa-twitter"></i>
-                    </a>
-                    <a href="#" class="social-icon-sm si-dark si-g-plus si-dark-round">
-                        <i class="fa fa-google-plus"></i>
-                        <i class="fa fa-google-plus"></i>
-                    </a>
-                    <a href="#" class="social-icon-sm si-dark si-skype si-dark-round">
-                        <i class="fa fa-skype"></i>
-                        <i class="fa fa-skype"></i>
-                    </a>
-                    <a href="#" class="social-icon-sm si-dark si-linkedin si-dark-round">
-                        <i class="fa fa-linkedin"></i>
-                        <i class="fa fa-linkedin"></i>
-                    </a>  
-                </div>
-            </div>
-            <div class="col-lg-5">
-                <span>&copy; Copyright 2017. All Right Reserved</span>
-            </div>
-        </div>
-    </div>
-</div><!--/footer bottom-->
+</footer>
 <!--back to top-->
 <a href="#" class="back-to-top hidden-xs-down" id="back-to-top"><i class="ti-angle-up"></i></a>
   <!-- <ul class="menu">
@@ -484,6 +490,10 @@
   <script type="text/javascript" src="revolution/js/extensions/revolution.extension.parallax.min.js"></script>
   <script type="text/javascript" src="revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
   <script type="text/javascript" src="revolution/js/extensions/revolution.extension.video.min.js"></script>
+  <script src="smart-form/contact/js/jquery.form.min.js" type="text/javascript"></script>
+  <script src="smart-form/contact/js/jquery.validate.min.js" type="text/javascript"></script>
+  <script src="smart-form/contact/js/additional-methods.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="smart-form/contact/js/smart-form.js"></script> 
   <script>
       /**Hero  script**/
       var tpj = jQuery;
