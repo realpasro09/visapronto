@@ -1,11 +1,11 @@
 	jQuery(document).ready(function($){
-			   
+
 				function reloadCaptcha(){ $("#captchax").attr("src","./smart-form/booking/php/captcha/captcha.php?r=" + Math.random()); }
 				$('.captcode').click(function(e){
 					e.preventDefault();
 					reloadCaptcha();
 				});
-				
+
 				function swapButton(){
 					var txtswap = $(".form-footer button[type='submit']");
 					if (txtswap.text() == txtswap.data("btntext-sending")) {
@@ -14,13 +14,13 @@
 						txtswap.data("btntext-original", txtswap.text());
 						txtswap.text(txtswap.data("btntext-sending"));
 					}
-				}				
-			   
-				/* @telephone number masking 
+				}
+
+				/* @telephone number masking
 				---------------------------------- */
-		  		$("#guestelephone").mask('(999) 999-999999', {placeholder:'X'});			   
-		
-				/* @ date range datepicker 
+		  		$("#guestelephone").mask('(999) 999-999999', {placeholder:'X'});
+
+				/* @ date range datepicker
 				---------------------------------- */
 				$( "#checkin" ).datepicker({
 					defaultDate: "+1w",
@@ -32,32 +32,32 @@
 						$( "#checkout" ).datepicker( "option", "minDate", selectedDate );
 					}
 				});
-				
+
 				$( "#checkout" ).datepicker({
 					defaultDate: "+1w",
 					changeMonth: false,
 					numberOfMonths: 1,
 					prevText: '<i class="fa fa-chevron-left"></i>',
-					nextText: '<i class="fa fa-chevron-right"></i>',			
+					nextText: '<i class="fa fa-chevron-right"></i>',
 					onClose: function( selectedDate ) {
 						$( "#checkin" ).datepicker( "option", "maxDate", selectedDate );
 					}
 				});
-				
+
 				/* @ validation and submition
-				---------------------------------- */				
+				---------------------------------- */
 				$( "#smart-form" ).validate({
-											
+
 						errorClass: "state-error",
 						validClass: "state-success",
 						errorElement: "em",
 						onkeyup: false,
-						onclick: false,						
+						onclick: false,
 						rules: {
 								guestname: {
 										required: true,
 										minlength: 2
-								},		
+								},
 								emailaddress: {
 										required: true,
 										email: true
@@ -65,16 +65,16 @@
 								adults: {
 										required: true,
 										number: true
-								},								
+								},
 								children: {
 										required: true,
 										number: true
 								},
 								checkin:{
-										required:true	
+										required:true
 								},
 								checkout:{
-										required:true	
+										required:true
 								},
 								comment:{
 										required:true,
@@ -83,13 +83,13 @@
 								captcha:{
 									required:true,
 									remote:'./smart-form/booking/php/captcha/process.php'
-								}								
+								}
 						},
 						messages:{
 								guestname: {
 										required: 'Enter your name',
 										minlength: 'Name must be at least 2 characters'
-								},				
+								},
 								emailaddress: {
 										required: 'Enter your email address',
 										email: 'Enter a VALID email address'
@@ -97,11 +97,11 @@
 								adults: {
 										required: 'Enter the number of adult guests',
 										number: 'Please enter a VALID number'
-								},														
+								},
 								children: {
 										required: 'Confirm the number of child guests',
 										number: 'Please enter a VALID number'
-								},															
+								},
 								checkin:{
 										required: 'Please select checkin date'
 								},
@@ -115,7 +115,7 @@
 								captcha:{
 										required: 'You must enter the captcha code',
 										remote:'Captcha code is incorrect'
-								}								
+								}
 						},
 						highlight: function(element, errorClass, validClass) {
 								$(element).closest('.field').addClass(errorClass).removeClass(validClass);
@@ -129,10 +129,10 @@
 						   } else {
 									error.insertAfter(element.parent());
 						   }
-						},				
+						},
 						submitHandler:function(form) {
 							$(form).ajaxSubmit({
-									target:'.result',			   
+									target:'.result',
 									beforeSubmit:function(){
 											swapButton();
 											$('.form-footer').addClass('progress');
@@ -153,8 +153,7 @@
 									 }
 							  });
 						}
-						
-				});		
-		
-	});				
-    
+
+				});
+
+	});
