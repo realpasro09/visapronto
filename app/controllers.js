@@ -3,7 +3,7 @@ var mainControllers = angular.module('myApp.mainControllers', []);
 mainControllers.controller('formController', ['$scope', '$http', function ($scope, $http) {
 
   $scope.send_email = function(){
-    const url = 'smart-form/contact/php/smartprocess.php';
+    const url = 'https://formspree.io/info@prontovisa.hn';
     const emailData = {
         sendername: $scope.sendername || '',
         emailaddress: $scope.emailaddress || '',
