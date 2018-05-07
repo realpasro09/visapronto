@@ -292,8 +292,11 @@ mientras dura tu proceso.
         <div class="col-md-6 mb40">
 
             <h4 class="text-uppercase">Dirección</h4>
-            <p>
-                10 Avenida NO, San Pedro Sula 21102
+            <div id="markermap" style="width: 100%;height: 350px;"></div>
+            <p style="margin-top: 12px;">
+                San Pedro Sula 21102, Cortes, Honduras<br/>
+                <b>Centro Comercial Nova Prisa</b><br/>
+                10 Avenida NO, entre 1 y 2 Calle NO, Bulevar Morazán
             </p>
             <br>
             <h4 class="text-uppercase">Horario de Oficina</h4>
@@ -452,6 +455,8 @@ mientras dura tu proceso.
   <script src="smart-form/contact/js/jquery.validate.min.js" type="text/javascript"></script>
   <script src="smart-form/contact/js/additional-methods.min.js" type="text/javascript"></script>
   <script type="text/javascript" src="smart-form/contact/js/smart-form.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMwVpUj3-oHHW8N21819BhKttOga2Rj2s"></script>
+  <script src="js/jquery.gmap.min.js"></script>
   <script>
       /**Hero  script**/
       var tpj = jQuery;
@@ -582,5 +587,24 @@ mientras dura tu proceso.
           });
       })(jQuery, window, document);
   </script>
+  <script>
+    // Marker Map
+    $(document).ready(function () {
+        map = new GMaps({
+            scrollwheel: false,
+            el: '#markermap',
+            lat: 15.5066024,
+            lng: -88.0298166
+        });
+        map.addMarker({
+            lat: 15.5066024,
+            lng: -88.0298166,
+            title: 'Nova Prisa',
+            infoWindow: {
+                content: '<h4>PRONTO VISA</h4><p>Somos especialistas en tramites de Visas Americanas</p>'
+            }
+        });
+    });
+</script>
 </body>
 </html>
